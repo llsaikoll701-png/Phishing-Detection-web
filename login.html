@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>UTAS Phishing Detection - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* الهيدر أعلى اليسار */
+        .header {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header img {
+            width: 30px;
+            height: auto;
+        }
+
+        .header span {
+            font-size: 16px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #1e3c72;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #1e3c72;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #16325c;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="utas_logo.png" alt="UTAS Logo">
+    <span>University of Technology and Applied Sciences</span>
+	
+</div>
+
+<div class="login-box">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter your UTAS email">
+    <button onclick="validateEmail()">Login</button>
+    <div class="error" id="errorMsg"></div>
+</div>
+
+<script>
+    function validateEmail() {
+        var email = document.getElementById("username").value;
+        var errorMsg = document.getElementById("errorMsg");
+
+        if (email.endsWith("@utas.edu.om")) {
+            window.location.href = "index.html";
+        } else {
+            errorMsg.textContent = "invalid username";
+        }
+    }
+</script>
+
+</body>
+</html>

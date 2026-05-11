@@ -1,0 +1,24 @@
+# Phishing Detection System Requirements
+# Python Version: 3.13.4
+# Minimum Supported: Python 3.7.3
+# Created: 2026-05-11
+
+gunicorn
+
+# Flask web framework
+flask>=2.3.0,<4.0.0
+
+# CORS support for Flask
+flask-cors>=4.0.0,<5.0.0
+
+# Machine Learning library
+scikit-learn>=1.3.0,<2.0.0
+
+# Data manipulation
+pandas>=2.0.0,<3.0.0
+
+# Numerical computing
+numpy>=1.26.4,<2.0.0
+
+# Pickle compatibility (built-in, included for reference)
+# pickle-mixin==1.0.2
