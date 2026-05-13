@@ -18,7 +18,7 @@ scikit-learn==1.7.2
 pandas==2.3.3
 
 # Numerical computing
-numpy==1.26.4
+numpy==2.3.4
 
 # Pickle compatibility (built-in, included for reference)
 # pickle-mixin==1.0.2
